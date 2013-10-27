@@ -1,0 +1,12 @@
+<p>
+	<strong>Drunken Renderings:</strong>
+	<%= @post.title %>
+</p>
+
+<p>
+	<strong>Text:</strong>
+	<%= @post.text %>
+</p>
+
+<%= link_to "Take me home", posts_path %>
+| <%= link_to 'Edit', edit_post_path(@post) %>

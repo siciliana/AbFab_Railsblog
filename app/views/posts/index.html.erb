@@ -1,0 +1,24 @@
+<h1> Fabulous Posts </h1>
+
+<%= link_to 'Render fabulousness', new_post_path %><br>
+
+<p>
+<table> 
+	<tr>
+		<th>Title</th>
+		<th>Text</th>
+	</tr>
+
+	<% @posts.each do |post| %>
+		<tr>
+			<td><%= post.title %></td>
+			<td><%= post.text %></td>
+			<td><%= link_to 'Show', post_path(post) %> | </td>
+			<td><%= link_to 'Edit', edit_post_path(post) %> | </td>
+			<td><%= link_to 'Destroy', post_path(post),
+                    method: :delete, data: { confirm: 'You may be drunk.  Are you sure?' } %></td>
+  		</tr>
+	<% end %>
+</table>
+</p>
+
